@@ -1,9 +1,13 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go:$HOME/.local/bin:$PATH"
 export PAGER="most"
 
 alias s="sensors"
-alias up="sudo zypper refresh && sudo zypper dup"
+alias up="sudo zypper refresh && echo && sudo zypper dup"
 alias jekyll_server="bundle exec jekyll serve --livereload --incremental"
+
+alias pip-clean="pip freeze --path .local/lib/python3.8/site-packages | xargs pip uninstall -y"
+
 alias miniconda-dl="curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && chmod u+x Miniconda3-latest-Linux-x86_64.sh"
+alias mambaforge-dl="wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh && chmod u+x Mambaforge-Linux-x86_64.sh"
 
 export XUVTOP="$HOME/Desktop/tardis-sn/atomic_data/CHIANTI_v9.0.1"
